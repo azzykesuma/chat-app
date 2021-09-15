@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+<body>
+  <section class="main">
+    <div class="topLevel">
+      <div class="patternTop"></div>
+      <!-- the phone part -->
+      <div class="mobilePhone">
+        <div class="topPart"></div>
+        <div class="header">
+          <div class="profile">
+            <div>
+              <ion-icon name="chevron-back-outline"></ion-icon>
+              <img src="./images/avatar.jpg" alt="avatar image">
+              <div>
+                <p class="name">Samuel Green</p>
+                <p class="status">Available to walk</p>
+              </div>
+            </div>
+            <button><ion-icon name="ellipsis-vertical-outline"></ion-icon></button> 
+          </div>
+        </div>
+        <div class="bodyPart">
+          <p class="admin">
+            That sounds great. i'd be happy to discuss more
+          </p>
+          <p class="admin">
+            can you send over some picture of your dog, please?
+          </p>
+          <div class="imageSpan">
+            <img src="./images/dog-image-1.jpg" alt="">
+            <img src="./images/dog-image-2.jpg" alt="">
+            <img src="./images/dog-image-3.jpg" alt="">
+          </div>
+          <div class="adminContainer">
+            <p class="client">
+              here are a few pictures. She's a happy girl!
+            </p>
+            <p class="client">
+              can you make it?
+            </p>
+          </div>
+          <p class="admin">
+            She looks so happy! The time we discussed works. how long shall i take her out for?
+          </p>
+          <div class="radioContainer">
+            <div class="options">
+              <div>
+                <div class="circle" id="1"></div>
+                <p>30 Minute Walk</p>
+              </div>
+              <h2 class="price">$29</h2>
+            </div>
+            <div class="options">
+              <div>
+                <div class="circle" id="2"></div>
+                <p>1 Hour Walk</p>
+              </div>
+              <h2 class="price">$49</h2>
+            </div>
+          </div>
+          <div class="textInput">
+            <form action="">
+              <label for="text"></label>
+              <input type="text" name="text"
+              placeholder="Type a message ..."
+              id="chat"
+              />
+              <button><ion-icon name="chevron-forward-outline"></ion-icon></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottomLevel">
+      <div>
+        <h1>Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat interface.
+          this makes it easy to discuss arrangement and make bookings. 
+          once the walk has been completed, you can rate your walker and book again
+          all through the chat.
+        </p>
+      </div>
+      <div class="bottomPattern"></div>
+    </div>
+  </section>
+<script src="./app.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+@import 'mixin.scss';
+
+// primary
+$PaleViolet : hsl(276, 100%, 81%); //(sub-heading at the top of the app UI)
+$ModerateViolet : hsl(276, 55%, 52%); //(chat on the left)
+$DesaturatedDarkViolet : hsl(271, 15%, 43%); //(chat on the right)
+$GrayishBlue : hsl(206, 6%, 79%); //(placeholder text)
+$VeryDarkDesaturatedViolet : hsl(271, 36%, 24%); //heading
+$DarkGrayishViolet : hsl(270, 7%, 64%); //paragraph
+
+// secondary
+$LightGrayishViolet : hsl(270, 20%, 96%); //(app background)
+$VeryDarkDesaturatedViolet : hsl(271, 36%, 24%); //(submit button background)
+$VeryLightMagenta : hsl(289, 100%, 72%); //radio button outline
+
+// gradient
+$LightMagenta: hsl(293, 100%, 63%);
+$LightViolet: hsl(264, 100%, 61%);
+
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box; 
+}
+
+html {
+    height : 100%;
+}
+
+body {
+    font-family: 'Rubik',sans-serif;
+    background: $LightGrayishViolet;
+    min-height: 100%;
+}
+
+.main {
+   position: relative;
+
+   @include mQ(1200px) {
+       display: flex;
+       align-items: center;
+       height : 100%;
+   }
+}
+
+.topLevel {
+
+
+    .patternTop {
+        width : 150px;
+        min-height: 500px;
+        background: linear-gradient(to bottom, $LightMagenta,$LightViolet);
+        border-radius: 0 0 200px 0;
+        position: relative;
+        z-index: -1;
+
+        @include mQ(1200px) {
+            width : 400px;
+            border-radius: 0 0 200px 200px;
+        }    
+    }
+
+    .mobilePhone {
+        width : 250px;
+        height : 540px;
+        border: 10px solid white;
+        border-radius: 20px;
+        position: absolute;
+        left : 50px;
+        top : 50px;
+        box-shadow: 0px 2px 14px -3px rgba(0,0,0,0.3);
+
+        .topPart {
+            height : 10px;
+            width : 50px;
+            background: white;
+            border-radius: 50px;
+            position: relative;
+            left : 90px;
+            bottom: 5px;
+
+            
+        }
+        .header {
+            background: linear-gradient(to left ,$LightMagenta,$LightViolet);
+            height : 50px;
+            width : 235px;
+            position: absolute;
+            top : 0;
+            border-radius: 5px;
+            z-index: -1;
+
+            .profile {
+                display: flex;
+                align-items: center;
+                padding : 10px;
+                justify-content: space-between;
+
+                ion-icon {
+                    color : white;
+                    opacity: 0.7;
+                }
+                
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    ion-icon {
+                        color : white;
+                    }
+
+                    img {
+                        width : 30px;
+                        height : 30px;
+                        border-radius: 50px;
+                        border: 2px solid white;
+                        margin-inline: 5px 10px;
+                    }
+
+                    div {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .name {
+                        font-size: 11px;
+                        color : white;
+                        font-weight: 500;
+                    }
+
+                    .status {
+                        font-size: 11px;
+                        color : $PaleViolet;
+                    }
+                }
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        @include mQ(1200px) {
+            left : 300px;
+            top : 150px;
+        }   
+    }
+    .bodyPart {
+        background: $LightGrayishViolet;
+        position: relative;
+        border-radius: 0 0 20px 20px;
+        top : 2.5em;
+        padding : 10px;
+        display: flex;
+        flex-direction: column;
+
+        .admin {
+            font-size: 9px;
+            padding : 10px 20px;
+            color: $ModerateViolet;
+            background: #C2F2F7 ;
+            width : 150px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .imageSpan {
+            display: flex; 
+            gap : 10px;
+            justify-content: flex-end;
+            margin-block: 20px;
+
+            img {
+                width : 40px;
+                height : 40px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .adminContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 10px;
+
+            .client {
+                background: white;
+                color : $DesaturatedDarkViolet;
+                margin-bottom: 10px;
+                padding : 10px;
+                font-size: 9px;
+                border-radius: 5px;
+                width : fit-content;
+                box-shadow: 0px 2px 14px -3px rgba(0,0,0,0.3);
+            }
+        }
+    }
+    .radioContainer {
+
+        .options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap : 10px;
+            background: linear-gradient(to left, $LightMagenta, $LightViolet);
+            margin-bottom: 10px;
+            padding : 5px 10px;
+            border-radius: 10px;
+            width : 180px;
+
+            div {
+                display: flex;
+                gap : 10px;
+                align-items: center;
+            }
+            
+            p {
+                font-size: 9px;
+                color : white;
+                opacity: 0.7;
+            }
+
+            .price {
+                color : white;
+                font-size: 12px;
+            }
+
+            .circle {
+                width : 10px;
+                height : 10px;
+                border-radius: 50px;
+                border: 1px solid $VeryLightMagenta;
+                cursor: pointer;
+                background: none;
+            }
+
+            .active {
+                background: white;
+                border: none;
+            }
+        }
+    }
+    .textInput {
+        position: relative;
+        top: 0;
+
+        form {
+            position: relative;
+        }
+        
+        input {
+            border-radius: 50px;
+            border: none;
+            padding : 10px;
+            padding-left : 20px;
+            width : 100%;
+            margin-top: 5px;
+            font-family: 'Rubik',sans-serif;
+            font-weight: 300;
+            font-size: 9px;
+
+            &:focus {
+                outline : none;
+            }
+            &::placeholder {
+                font-size: 9px;
+            }
+        }
+
+        button {
+            background: $VeryDarkDesaturatedViolet;
+            border: none;
+            border-radius: 50px;
+            position: absolute;
+            top : 10px;
+            right : 6px;
+            width : 22px;
+            height : 22px;
+            cursor: pointer;
+
+            ion-icon {
+                color : white;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.bottomLevel {
+    position: relative;
+    top: 6em;
+    padding : 20px;
+    text-align: center;
+
+    div {
+        position: relative;
+    }
+
+    h1 {
+        color : $VeryDarkDesaturatedViolet;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    p {
+        color : $DarkGrayishViolet;
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .bottomPattern {
+        height : 500px;
+        width : 200px;
+        background: #DCFCFF;
+        position: absolute;
+        right: 0;
+        bottom : 0em;
+        z-index: -999;
+        border-radius: 200px 0 0 0;
+
+        @include mQ(1200px) {
+            width : 400px;
+            border-radius: 200px 200px  0px 0px;
+            right: 0;
+            top : 5em;
+        }
+    }
+
+    @include mQ(1200px) {
+        max-width: 500px;
+        text-align: left;
+        margin-left: 250px;
+    }
+}
